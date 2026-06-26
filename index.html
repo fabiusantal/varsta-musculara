@@ -357,9 +357,22 @@
     .letter{padding:32px 22px}
     .dark,.confirm{padding:32px 24px}
   }
+  /* ---- Location ---- */
+  .loc{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px 22px; box-shadow:var(--shadow-sm); margin-top:8px; }
+  .loc-info{ display:flex; align-items:center; gap:14px; }
+  .loc-pin{ font-size:26px; line-height:1; }
+  .loc-addr{ font-family:'Fraunces',serif; font-weight:600; font-size:20px; color:var(--ink-deep); line-height:1.1; }
+  .loc-sub{ font-size:14px; color:var(--text-soft); margin-top:3px; }
+  .loc-btn{ display:inline-flex; align-items:center; gap:8px; background:var(--mov); color:#fff; font-weight:700; font-size:14.5px; padding:13px 22px; border-radius:100px; white-space:nowrap; box-shadow:0 12px 26px -10px rgba(92,30,250,.55); transition:transform .2s ease; }
+  .loc-btn:hover{ transform:translateY(-2px); }
+  .loc-maps{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+  @media(max-width:640px){ .loc-maps{ grid-template-columns:1fr; } }
+  .loc-frame{ position:relative; border-radius:18px; overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--line); }
+  .loc-frame iframe{ display:block; width:100%; height:250px; border:0; }
+  .loc-cap{ position:absolute; top:10px; left:10px; background:rgba(22,13,48,.78); color:#fff; font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:5px 11px; border-radius:100px; backdrop-filter:blur(4px); z-index:2; }
 </style>
 <meta property="og:title" content="Tu stii care e varsta ta musculara?">
-<meta property="og:description" content="O invitatie personala la o sesiune de masuratori cu tehnologie VALD. Afla varsta reala a muschilor tai si ce inseamna pentru sanatatea ta.">
+<meta property="og:description" content="O invitatie personala la o sesiune de masuratori cu tehnologie VALD. Strada Stefan Negulescu 39, Bucuresti.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#5C1EFA">
 </head>
@@ -645,6 +658,32 @@
       </div>
     </section>
 
+
+    <!-- 9. LOCATION -->
+    <section class="reveal">
+      <div class="sec-eyebrow">Unde ne vedem</div>
+      <h2>Te astept <i>aici</i>.</h2>
+      <div class="loc">
+        <div class="loc-info">
+          <span class="loc-pin">📍</span>
+          <div>
+            <div class="loc-addr">Strada Stefan Negulescu 39</div>
+            <div class="loc-sub">Bucuresti · zona Dorobanti / Floreasca</div>
+          </div>
+        </div>
+        <a class="loc-btn" href="https://www.google.com/maps/search/?api=1&query=Strada%20Stefan%20Negulescu%2039%20Bucuresti" target="_blank" rel="noopener">Deschide in Google Maps →</a>
+      </div>
+      <div class="loc-maps">
+        <div class="loc-frame">
+          <span class="loc-cap">Cladirea</span>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=&layer=c&cbll=44.4594722,26.0982746&cbp=11,0,0,0,0&output=svembed"></iframe>
+        </div>
+        <div class="loc-frame">
+          <span class="loc-cap">Pe harta</span>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=44.4594722,26.0982746&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- 10. CLOSING -->
     <div class="closing reveal">
